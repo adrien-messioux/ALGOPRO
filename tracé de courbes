@@ -1,0 +1,70 @@
+#projet info 
+
+import numpy as np
+import matplotlib.pyplot as plt 
+
+
+
+#x = np.array([])
+#y = np.array([])
+
+#plt.plot(x, y)
+#plt.show()
+
+import pandas as pd 
+T = pd.read_csv('EIVP_KM (1).csv', sep=';')
+#print (T)
+
+
+L = list(T)
+#print(L)
+
+
+L1 = T['id'].tolist()
+#print (L1)
+
+L2 = T['noise'].tolist()
+#print (L2)
+
+L3 = T['temp'].tolist()
+
+L4 = T['humidity'].tolist()
+
+L5 = T['lum'].tolist()
+L6 = T['co2'].tolist()
+
+L7 = T['sent_at'].tolist()
+
+
+
+# séparer les valeurs en fonction des capteurs 
+
+def capteurs(L1):
+    l1 = []
+    l2 = []
+    for i in range(len(L1)):
+        if L1[i] == 1 :
+            l1.append(L1[i])
+        else :
+            l2.append(L1[i])
+    return l1, l2
+        
+l1, l2 = capteurs(L1)
+#print (l1, l2)
+
+
+def new(L2):
+    L2a = L2[:1336]
+    return L2a
+
+L2a = new(L2)
+#print (L2a)
+    
+L7a = new(L7)
+#print (L7a)
+
+y = np.array(L2a)
+x = np.array(L7a)
+    
+plt.plot(x, y)
+plt.show()
