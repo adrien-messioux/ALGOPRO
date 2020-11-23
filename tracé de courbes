@@ -68,3 +68,15 @@ x = np.array(L7a)
     
 plt.plot(x, y)
 plt.show()
+
+L5a = new(L5)
+x = np.array(L7a)
+y = np.array(L5a)
+    
+plt.plot(x, y)
+
+plt.xlabel("sent_at")
+plt.ylabel("lum")
+plt.title("courbe des valeurs de la lumière en fonction du temps")
+
+plt.show()
