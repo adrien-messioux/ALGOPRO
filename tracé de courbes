@@ -80,3 +80,51 @@ plt.ylabel("lum")
 plt.title("courbe des valeurs de la lumière en fonction du temps")
 
 plt.show()
+
+#calcul minimum 
+def min(L):
+    m = L[0]
+    for i in range (len(L)):
+        if L[i] <= m:
+            m = L[i]
+    return m 
+
+m2 = min (L2a)
+#print (m2)
+
+m3 = min (L3a)
+
+m4 = min (L4a)
+
+m5 = min (L5a)
+
+m6 = min (L6a)
+
+#calcul maximum 
+def max(L):
+    M = L[0]
+    for i in range (len(L)):
+        if L[i] >= M:
+            M = L[i]
+    return M
+
+M2 = max(L2a)
+#print (M2)
+
+M3 = max(L3a)
+
+M4 = max(L4a)
+
+M5 = max(L5a)
+
+M6 = max(L6a)
+
+#calcul moyenne 
+def moyenne (L):
+    somme = 0
+    for i in range (len(L)):
+        somme = somme + L[i]
+    return somme/len(L)
+
+#print(moyenne(L2a))
+
